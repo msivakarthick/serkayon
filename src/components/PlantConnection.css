@@ -1,0 +1,760 @@
+
+/* ================================
+   MAIN SECTION
+================================ */
+
+.plant-connection {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 15px 20px 60px;
+  background: #f8f8fa;
+  font-family: Inter, Arial, sans-serif;
+  color: #20283c;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+.plant-connection *,
+.plant-connection *::before,
+.plant-connection *::after {
+  box-sizing: border-box;
+}
+
+/* ================================
+   MAIN TWO CONTENT LAYOUT
+================================ */
+
+.plant-box {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.plant-container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.plant-hero {
+  max-width: 600px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.plant-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #963d57;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+
+.plant-eyebrow span {
+  width: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, #29344d, #df513d);
+}
+
+.plant-hero h1 {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.plant-hero h1 span {
+  background: linear-gradient(90deg, #323047, #d94b38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plant-hero p {
+  max-width: 750px;
+  margin: 17px 0;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #788092;
+}
+
+/* ================================
+   IMAGE BOX
+================================ */
+
+.plant-image-box {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 300px;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 9px;
+}
+
+.plant-image-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    transparent 30%,
+    transparent 75%,
+    rgba(255, 255, 255, 0.12)
+  );
+  pointer-events: none;
+}
+
+/* ================================
+   IMAGE LABEL
+================================ */
+
+.image-label {
+  position: absolute;
+  top: 3px;
+  left: 13px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: white;
+}
+
+.label-dot {
+  width: 7px;
+  height: 7px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* ================================
+   RIGHT IMAGE BOX
+================================ */
+
+.right-image-box {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+}
+
+.right-image-box > .world-image {
+  display: none;
+}
+
+/* GIRL + MESSAGE CONTAINER */
+
+.mobile-monitor-animation {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  width: 80%;
+  height: 100%;
+}
+
+/* GIRL IMAGE */
+
+.lady-mobile-image {
+  position: absolute;
+  right: 42%;
+  bottom: -17%;
+  z-index: 3;
+  width: 49%;
+  height: 78%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+/* ================================
+   MESSAGE BUBBLE
+================================ */
+
+.plant-notification-popup {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  z-index: 10;
+  display: block;
+  width: 75%;
+  height: 76%;
+  visibility: visible;
+  opacity: 1;
+  animation: messageFloat 4s ease-in-out infinite;
+}
+
+.notification-bubble-svg {
+  position: absolute;
+  top: -17%;
+  left: 60%;
+  z-index: 1;
+  display: block;
+  width: 70%;
+  height: 113%;
+  overflow: visible;
+}
+
+.notification-bubble-content {
+  position: absolute;
+  top: 13%;
+  left: 13%;
+  z-index: 2;
+  display: block;
+  width: 75%;
+  height: 72%;
+}
+
+/* HEADER */
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 7px;
+  font-size: 9px;
+  font-weight: 800;
+  color: #29344b;
+  border-bottom: 1px solid #eeeaf0;
+}
+
+.notification-live {
+  font-size: 7px;
+  letter-spacing: 0.7px;
+  color: #42a987;
+}
+
+/* ================================
+   NOTIFICATION STACK
+================================ */
+
+.notification-stack {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  margin-top: 9px;
+}
+
+.plant-notification {
+  position: absolute;
+  top: -17px;
+  left: 189px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 75%;
+  min-height: 43px;
+  padding: 7px;
+  background: #ffffff;
+  border: 1px solid #eeedf0;
+  border-radius: 9px;
+  box-shadow: 0 5px 14px rgba(30, 35, 55, 0.07);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+}
+
+/* PLANT 1 */
+
+.notification-one {
+  top: -49px;
+  left: 71%;
+  animation: showPlantOne 10s ease-in-out infinite;
+}
+
+/* PLANT 2 */
+
+.notification-two {
+  top: 1px;
+  left: 71%;
+  animation: showPlantTwo 10s ease-in-out infinite;
+}
+
+/* PLANT 3 */
+
+.notification-three {
+  top: 60px;
+  left: 71%;
+  animation: showPlantThree 10s ease-in-out infinite;
+}
+
+/* ================================
+   NOTIFICATION ICONS
+================================ */
+
+.notification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.production-icon {
+  color: #39a98d;
+  background: #e6f4f0;
+}
+
+.energy-icon {
+  color: #d88b23;
+  background: #fff1dc;
+}
+
+.alert-icon {
+  color: #e45468;
+  background: #fbe9ed;
+}
+
+/* NOTIFICATION TEXT */
+
+.notification-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.notification-details small {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #a0a5b0;
+}
+
+.notification-details strong {
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #30394d;
+}
+
+.notification-details strong span {
+  font-size: 8px;
+  color: #36a78b;
+}
+
+.notification-details b {
+  font-size: 7px;
+  font-weight: 700;
+  color: #36a78b;
+}
+
+.notification-details .alert-text {
+  color: #b77b7e;
+}
+
+/* CHECK ICON */
+
+.notification-check {
+  padding-right: 3px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #35a98c;
+}
+
+/* ALERT DOT */
+
+.alert-dot {
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  background: #ed553c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fdebe7;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes messageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes showPlantOne {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+  }
+
+  4%, 80% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  90%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes showPlantTwo {
+  0%, 19% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+  }
+
+  23%, 80% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  90%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes showPlantThree {
+  0%, 39% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+  }
+
+  43%, 80% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  90%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1050px) {
+  .notification-bubble-svg {
+    top: -24%;
+    left: 34%;
+    width: 86%;
+  }
+
+  .plant-notification-popup {
+    top: 19%;
+    left: 3%;
+  }
+
+  .lady-mobile-image {
+    top: 42%;
+    left: -10%;
+  }
+
+  .plant-notification {
+    top: -42%;
+    left: 41%;
+    width: 90%;
+  }
+
+  .notification-two {
+    top: -9%;
+  }
+
+  .notification-three {
+    top: 29%;
+  }
+}
+
+/* ================================
+   SMALL TABLET
+================================ */
+
+@media (max-width: 768px) {
+  .notification-bubble-svg {
+    height: 255px;
+  }
+
+  .plant-connection {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 15px;
+  }
+
+  .plant-container {
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .plant-image-box {
+    height: 270px;
+  }
+
+  .plant-notification-popup {
+    top: 19%;
+    left: 1%;
+    width: 82%;
+    height: 75%;
+  }
+
+  .lady-mobile-image {
+    top: 49%;
+    left: -10%;
+    width: 48%;
+    height: 74%;
+  }
+
+  .notification-bubble-content {
+    top: 13%;
+    left: 12%;
+    width: 77%;
+  }
+
+  .notification-stack {
+    height: 145px;
+  }
+
+  .plant-notification {
+    top: -43%;
+    left: 40%;
+    gap: 5px;
+    width: 90%;
+    padding: 6px;
+  }
+
+  .notification-two {
+    top: -13px;
+  }
+
+  .notification-three {
+    top: 45px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 550px) {
+  .notification-bubble-svg {
+    top: -25%;
+    left: 54%;
+    width: 90%;
+    height: 250px;
+  }
+
+  .plant-connection {
+    width: 100%;
+    max-width: 100%;
+    padding: 35px 13px;
+  }
+
+  .plant-container {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plant-hero {
+    margin-bottom: 0;
+  }
+
+  .plant-hero h1 {
+    font-size: 34px;
+    letter-spacing: -1.5px;
+  }
+
+  .plant-hero p {
+    font-size: 12px;
+  }
+
+  .plant-image-box {
+    width: 100%;
+    height: 260px;
+  }
+
+  .right-image-box {
+    min-height: 260px;
+  }
+
+  .plant-notification-popup {
+    top: 20%;
+    left: -8%;
+    width: 78%;
+    height: 76%;
+  }
+
+  .lady-mobile-image {
+    top: 52%;
+    left: -3%;
+    width: 47%;
+    height: 73%;
+  }
+
+  .notification-bubble-content {
+    top: 13%;
+    left: 13%;
+    width: 75%;
+    height: 73%;
+  }
+
+  .notification-header {
+    font-size: 8px;
+  }
+
+  .notification-stack {
+    height: 145px;
+    margin-top: 7px;
+  }
+
+  .plant-notification {
+    min-height: 42px;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .notification-one {
+    top: -55px;
+    left: 66%;
+    width: 95%;
+  }
+
+  .notification-two {
+    top: 0;
+    left: 66%;
+    width: 95%;
+  }
+
+  .notification-three {
+    top: 55px;
+    left: 66%;
+    width: 95%;
+  }
+
+  .notification-icon {
+    width: 29px;
+    min-width: 29px;
+    height: 29px;
+    font-size: 17px;
+  }
+
+  .notification-details small {
+    font-size: 6px;
+  }
+
+  .notification-details strong {
+    font-size: 8px;
+  }
+
+  .notification-details strong span {
+    font-size: 7px;
+  }
+
+  .notification-details b {
+    font-size: 6px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+  .plant-connection {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .notification-bubble-svg {
+    top: -20%;
+    left: 32%;
+    width: 100%;
+    height: 255px;
+  }
+
+  .plant-hero h1 {
+    font-size: 29px;
+  }
+
+  .plant-image-box {
+    height: 240px;
+  }
+
+  .plant-notification-popup {
+    width: 82%;
+    height: 75%;
+    left: 2%;
+    top: 16%;
+  }
+
+  .lady-mobile-image {
+    position: absolute;
+    top: 45%;
+    left: -9%;
+    width: 46%;
+  }
+
+  .notification-stack {
+    height: 135px;
+  }
+
+  .notification-one {
+    top: -48px;
+    left: 38%;
+    width: 110%;
+  }
+
+  .notification-two {
+    top: 5px;
+    left: 38%;
+    width: 110%;
+  }
+
+  .notification-three {
+    top: 60px;
+    left: 38%;
+    width: 110%;
+  }
+}
+
+/* ================================
+   RIGHT IMAGE LABEL
+================================ */
+
+.label-dot2 {
+  background-color: white;
+}

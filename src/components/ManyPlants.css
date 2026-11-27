@@ -1,0 +1,82 @@
+.many-plants {
+  padding: 80px 24px;
+  background: #fbf9f7;
+}
+
+.many-plants-wrap {
+  max-width: 794px;
+  margin: 0 auto;
+}
+
+.many-plants h1 {
+  margin-bottom: 14px;
+  color: #4f1f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 500;
+}
+
+.many-intro {
+  /* max-width: 500px; */
+  margin-bottom: 18px;
+  color: #30272e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.role-table {
+  border: 1px solid #e2d8df;
+  background: white;
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 2fr;
+  min-height: 38px;
+  border-bottom: 1px solid #e2d8df;
+}
+
+.role-row:last-child {
+  border-bottom: none;
+}
+
+.role-row span {
+  padding: 9px 10px;
+  color: #40363e;
+  font-size: 11px;
+}
+
+.role-head {
+  background: #f0e8ee;
+}
+
+.role-head span {
+  color: #4f1f40;
+  font-weight: 700;
+}
+
+.many-note {
+  /* max-width: 440px; */
+  margin-top: 12px;
+  color: #786b75;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .role-table {
+    overflow-x: auto;
+  }
+
+  .role-row {
+    min-width: 700px;
+  }
+  .many-plants h1{
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: normal;
+
+  }
+}

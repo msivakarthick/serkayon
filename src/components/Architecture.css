@@ -1,0 +1,521 @@
+/* ========================================
+   MAIN SECTION
+======================================== */
+
+.architecture {
+  min-height: 100vh;
+  padding: 60px 25px;
+  background: #f8f5f8;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ========================================
+   COMPANY
+======================================== */
+
+.architecture .company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-30px) scale(0.85);
+}
+.architecture.scroll-visible .company {
+  animation: companyAppear 1s ease forwards;
+}
+.architecture .company-image {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.architecture .company h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #4f1f40;
+  font-size: 32px;
+}
+
+/* Company animation */
+
+@keyframes companyAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================================
+   COMPANY CONNECTOR
+======================================== */
+
+.architecture .company-connector {
+    width: 2px;
+  height: 60px;
+  margin: 0 auto;
+  background: #b58baa;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.architecture.scroll-visible .company-connector {
+  animation: connectorAppear 0.6s ease 0.8s forwards;
+}
+@keyframes connectorAppear {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ========================================
+   PLANTS GRID
+======================================== */
+
+.architecture .plants {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Plant cards */
+
+.architecture .plant-card {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+/* Plant images */
+
+.architecture .plant-card img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.architecture .plant-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Plant text */
+
+.architecture .plant-card h2 {
+  margin-top: 18px;
+  color: #4f1f40;
+  font-size: 22px;
+}
+
+.architecture .plant-card p {
+  margin-top: 8px;
+  color: #847482;
+  font-size: 13px;
+}
+.architecture.scroll-visible .plant-card {
+  animation: plantAppear 0.7s ease both;
+}
+/* Plant animation */
+
+@keyframes plantAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Each plant appears one by one */
+
+.architecture.scroll-visible .plant-card.plant-one {
+  animation-delay: 1s;
+}
+
+.architecture.scroll-visible .plant-card.plant-two {
+  animation-delay: 1.8s;
+}
+
+.architecture.scroll-visible .plant-card.plant-three {
+  animation-delay: 2.6s;
+}
+
+/* ========================================
+   NEXT TRACEABILITY BUTTON
+======================================== */
+
+.next-trace-button {
+  display: block;
+  margin: 35px auto 0;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #4f1f40;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.next-trace-button:hover {
+  background: #71365f;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   TRACEABILITY SECTION
+======================================== */
+
+.trace-section {
+  max-width: 1100px;
+  margin: 60px auto 0;
+  padding: 35px 25px;
+  background: white;
+  border: 1px solid #e8dce6;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(50, 25, 45, 0.06);
+  scroll-margin-top: 80px;
+}
+
+.trace-label {
+  color: #9a628c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.trace-section > h2 {
+  margin-top: 12px;
+  color: #4f1f40;
+  font-size: 32px;
+}
+
+.trace-description {
+  margin: 10px 0 30px;
+  color: #806d7c;
+  font-size: 14px;
+}
+
+/* ========================================
+   TRACEABILITY FLOW
+======================================== */
+
+.trace-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Individual steps */
+
+.trace-step {
+  flex: 1;
+  min-width: 0;
+  padding: 18px 10px;
+  background: #faf6fa;
+  border: 1px solid #e8dce6;
+  border-radius: 13px;
+
+  opacity: 0;
+  transform: translateY(25px);
+  animation: traceAppear 0.6s ease forwards;
+
+  transition: box-shadow 0.3s ease;
+}
+
+.trace-step:hover {
+  box-shadow: 10px 8px 20px rgba(50, 25, 45, 0.1);
+}
+
+/* Step icon */
+
+.trace-icon {
+  margin-bottom: 14px;
+  font-size: 30px;
+}
+
+/* Step number */
+
+.trace-step > span {
+  color: #9a8094;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Step heading */
+
+.trace-step h3 {
+  margin-top: 8px;
+  color: #4f1f40;
+  font-size: 15px;
+}
+
+/* Step description */
+
+.trace-step p {
+  margin-top: 8px;
+  color: #806d7c;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   STEP ANIMATION DELAYS
+======================================== */
+
+.trace-raw {
+  animation-delay: 0.2s;
+}
+
+.trace-batch {
+  animation-delay: 0.9s;
+}
+
+.trace-recipe {
+  animation-delay: 1.6s;
+}
+
+.trace-production {
+  animation-delay: 2.3s;
+}
+
+.trace-output {
+  animation-delay: 3s;
+}
+
+@keyframes traceAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TRACE ARROWS
+======================================== */
+
+.trace-arrow {
+  flex-shrink: 0;
+  color: #ad7aa1;
+  font-size: 22px;
+
+  opacity: 0;
+  animation: traceArrowAppear 0.4s ease forwards;
+}
+
+/* Each arrow appears one by one */
+
+.trace-arrow.arrow-one {
+  animation-delay: 0.65s;
+}
+
+.trace-arrow.arrow-two {
+  animation-delay: 1.35s;
+}
+
+.trace-arrow.arrow-three {
+  animation-delay: 2.05s;
+}
+
+.trace-arrow.arrow-four {
+  animation-delay: 2.75s;
+}
+
+@keyframes traceArrowAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .architecture {
+    padding: 45px 18px;
+  }
+
+  .architecture .company-image {
+    width: 170px;
+    height: 130px;
+  }
+
+  .architecture .plants {
+    gap: 15px;
+  }
+
+  .architecture .plant-card {
+    padding: 12px;
+  }
+
+  .architecture .plant-card img {
+    height: 130px;
+  }
+
+  .architecture .plant-card h2 {
+    font-size: 18px;
+  }
+
+  .trace-section {
+    padding: 28px 15px;
+  }
+
+  .trace-section > h2 {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 550px) {
+  .architecture {
+    padding: 40px 20px;
+  }
+
+  .architecture .company-image {
+    width: 160px;
+    height: 120px;
+  }
+
+  .architecture .company h1 {
+    font-size: 28px;
+  }
+
+  .architecture .company-connector {
+    height: 45px;
+  }
+
+  .architecture .plants {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    gap: 20px;
+  }
+
+  .architecture .plant-card img {
+    height: 190px;
+  }
+
+  .architecture .plant-card h2 {
+    font-size: 20px;
+  }
+
+  .trace-section {
+    padding: 25px 15px;
+  }
+
+  .trace-section > h2 {
+    font-size: 26px;
+  }
+
+  .trace-flow {
+    flex-direction: column;
+  }
+
+  .trace-step {
+    flex: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .trace-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .architecture .company,
+  .architecture .company-connector,
+  .architecture .plant-card,
+  .trace-step,
+  .trace-arrow {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Connection button */
+
+.live-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.live-dot.connected {
+  background: #e4f7eb;
+  color: #21834a;
+}
+
+.live-dot.disconnected {
+  background: #fde8e8;
+  color: #bb3030;
+}
+
+/* Small status dot */
+
+.connection-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Disconnected data */
+
+.disconnected-badge {
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: #fde8e8;
+  color: #bb3030;
+  font-size: 10px;
+}
+
+/* Disable alert action while disconnected */
+
+.alert-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

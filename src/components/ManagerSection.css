@@ -1,0 +1,73 @@
+.Manager {
+  padding: 80px 24px;
+  background: #fbf8f6;
+}
+
+.Manager h1 {
+  max-width: 1200px;
+  margin: 0 auto 12px;
+  color: #241a21;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.Manager > p {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  color: #6d5f69;
+  font-size: 15px;
+  text-align: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d97706;
+  margin-top: 7px;
+}
+
+.plant1 {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  column-gap: 15px;
+  row-gap: 4px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 14px auto 0;
+  padding: 14px 18px;
+  background-color: bisque;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.plant1 p {
+  grid-column: 2;
+  margin: 0;
+  text-align: left;
+  color: black;
+  line-height: 1.6;
+}
+
+.plant1 p:first-of-type {
+  grid-row: 1;
+  font-weight: 600;
+}
+
+.plant1 p:last-of-type {
+  grid-row: 2;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .Manager {
+    padding: 60px 20px;
+  }
+
+  .plant1 {
+    padding: 18px;
+  }
+}

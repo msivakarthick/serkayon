@@ -1,0 +1,266 @@
+.technology-proof {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 25px 4.2% 22px;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202a40;
+  overflow-x: clip;
+}
+
+.technology-proof *,
+.technology-proof *::before,
+.technology-proof *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.tp-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 55px;
+  margin-bottom: 43px;
+}
+
+.tp-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #963d57;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+
+.tp-eyebrow span {
+  width: 27px;
+  height: 1.5px;
+  background: linear-gradient(90deg, #252d43, #c33c35);
+}
+
+.tp-heading h1 {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.tp-heading h1 span {
+  background: linear-gradient(90deg, #473047, #a43a4c, #e74720);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tp-description {
+  text-align: left;
+  color: #788296;
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 550px;
+  margin: 25px 0 0 auto;
+}
+
+/* Industry Cards */
+
+.tp-industries {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 42px;
+}
+
+.tp-card {
+  min-width: 0;
+  min-height: 145px;
+  padding: 19px;
+  border: 1px solid #ebe9ed;
+  border-radius: 12px;
+  background: #fcfafb;
+  transition: all 0.3s ease;
+}
+
+.tp-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 11px;
+  background: #f3e9ed;
+  color: #963d60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.tp-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 9px;
+  color: #263047;
+}
+
+.tp-card p {
+  font-size: 13px;
+  color: #8b94a6;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Partners Section */
+
+.tp-partners {
+  min-width: 0;
+  border: 1px dashed #ded9df;
+  border-radius: 13px;
+  padding: 22px;
+  background: #fcfafb;
+}
+
+.tp-partners h4 {
+  font-size: 15px;
+  letter-spacing: 1.6px;
+  color: #ad7184;
+  margin: 0 0 19px;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Partner Slider */
+
+.tp-partner-slider {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tp-partner-track {
+  display: flex;
+  width: max-content;
+  animation: partnerScroll 25s linear infinite;
+}
+
+.tp-partner-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.tp-partner-box {
+  width: 190px;
+  height: 100px;
+  flex-shrink: 0;
+  border: 1px solid #eeebef;
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.tp-partner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Pause Animation on Hover */
+
+.tp-partner-slider:hover .tp-partner-track {
+  animation-play-state: paused;
+}
+
+/* Continuous X-Axis Animation */
+
+@keyframes partnerScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tp-note {
+  font-size: 15px;
+  color: #a1a1aa;
+  margin: 22px 0 2px;
+  text-align: left;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 900px) {
+  .tp-header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tp-description {
+    margin: 10px 0 0;
+    max-width: 600px;
+  }
+
+  .tp-industries {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tp-partner-box {
+    width: 170px;
+  }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 550px) {
+  .technology-proof {
+    padding: 25px 18px;
+  }
+
+  .tp-heading h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .tp-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .tp-description {
+    font-size: 12px;
+  }
+
+  .tp-industries {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tp-card {
+    min-height: 130px;
+  }
+
+  .tp-partners {
+    padding: 16px;
+  }
+
+  .tp-partner-box {
+    width: 145px;
+    height: 60px;
+  }
+
+  .tp-note {
+    line-height: 1.6;
+  }
+}

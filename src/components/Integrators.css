@@ -1,0 +1,134 @@
+.integrators {
+  padding: 80px 44px;
+  background: #f3ebf1;
+}
+
+.integrators-wrap {
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.integrators h1 {
+  margin-bottom: 14px;
+  color: #4f1f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 500;
+  /* width: 1000px; */
+}
+
+.integrators-intro {
+  /* max-width: 620px; */
+  margin-bottom: 25px;
+  color: #30272e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.integrator-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.integrator-card {
+  padding: 20px;
+  border: 1px solid #e3d8df;
+  border-radius: 8px;
+  background: white;
+}
+
+.integrator-card h2 {
+  margin-bottom: 8px;
+  color: #6a2b56;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.integrator-card ul {
+  padding-left: 18px;
+}
+
+.integrator-card li {
+  margin-bottom: 9px;
+  color: #40363e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.deployment-title {
+  margin: 28px 0 12px;
+  color: #6a2b56;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.deployment-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.deployment-step {
+  padding-top: 10px;
+  border-top: 3px solid #6a2b56;
+}
+
+.deployment-step span {
+  color: #786b75;
+  font-size: 10px;
+}
+
+.deployment-step p {
+  margin-top: 5px;
+  color: #40363e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.partner-button {
+  margin-top: 25px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #5b1e4c;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.partner-button:hover {
+  background: #72285e;
+}
+/* .integrators h1 {
+  width: 280px;
+} */
+@media (max-width: 700px) {
+  .integrators {
+    padding: 60px 20px;
+  }
+
+  .integrator-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .deployment-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .deployment-steps {
+    grid-template-columns: 1fr;
+  }
+  .integrators h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+}

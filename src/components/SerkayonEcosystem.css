@@ -1,0 +1,616 @@
+
+/* ================================
+   MAIN PAGE
+================================ */
+
+.serkayon {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 0 5%;
+  background: #ffffff;
+  color: #172b46;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+.serkayon *,
+.serkayon *::before,
+.serkayon *::after {
+  box-sizing: border-box;
+}
+
+.serkayon-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.serkayon-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.serkayon-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #963d57;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+
+.serkayon-heading {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.serkayon-heading span {
+  background: linear-gradient(
+    100deg,
+    #26334f,
+    #9c3550,
+    #ed4a2d
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.serkayon-intro {
+  color: #718096;
+  font-size: 20px;
+  line-height: 1.9;
+  max-width: 550px;
+  text-align: left;
+}
+
+.serkayon-pill {
+  display: inline-block;
+  border: 1px solid #eadde3;
+  color: #a34b62;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+/* ================================
+   MAIN DIAGRAM
+================================ */
+
+.serkayon-diagram {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e7e0e6;
+  background: linear-gradient(
+    135deg,
+    #fdfbfc,
+    #f7f5f8
+  );
+  border-radius: 20px;
+  padding: 35px 30px 30px;
+  box-shadow: 0 12px 40px rgba(35, 30, 55, .06);
+}
+
+.diagram-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e2e8;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #8992a0;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.diagram-status {
+  color: #278c62;
+  margin-right: 5px;
+}
+
+.circle {
+  margin-right: 5px;
+}
+
+/* ================================
+   PARTICIPANTS
+================================ */
+
+.participants-network {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.participants {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.participant-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e6dfe6;
+  border-radius: 14px;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  transition: all .3s ease;
+}
+
+/* PARTICIPANT CONNECTION */
+
+.participant-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -75px;
+  height: 74px;
+  border-left: 1.5px solid #d65b54;
+}
+
+/* PARTICIPANT ICON */
+
+.participant-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #a34d65;
+  background: #f6eaf0;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.participant-card h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #25344b;
+}
+
+.participant-card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  white-space: pre-line;
+  color: #8992a0;
+}
+
+/* ================================
+   CENTRAL SERKAYON SECTION
+================================ */
+
+.serkayon-core {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    110deg,
+    #303148,
+    #74334c,
+    #a53c38
+  );
+  border: 1px solid #c44d3e;
+  border-radius: 15px;
+  padding: 15px 25px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 25px rgba(95, 45, 60, .18);
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 150px;
+}
+
+.core-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.core-logo {
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 9px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.core-brand h3 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.core-brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+}
+
+.core-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.core-tags span {
+  border: 1px solid rgba(255,255,255,.23);
+  background: rgba(255,255,255,.12);
+  border-radius: 30px;
+  padding: 12px 18px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.core-caption {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #f8e7e9;
+}
+
+/* ================================
+   OUTCOMES
+================================ */
+
+.outcomes-network {
+  position: relative;
+  padding-top: 48px;
+}
+
+.outcomes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.outcome-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e6dfe6;
+  border-radius: 13px;
+  text-align: center;
+  padding: 25px 15px;
+  height: 150px;
+  transition: all .3s ease;
+}
+
+/* OUTCOME CONNECTION */
+
+.outcome-card::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -54px;
+  height: 55px;
+  border-left: 1.5px solid #d65b54;
+}
+
+.outcome-icon {
+  color: #a44861;
+  font-size: 26px;
+}
+
+.outcome-card h4 {
+  font-size: 17px;
+  margin: 0 0 4px;
+  color: #26354a;
+}
+
+.outcome-card p {
+  font-size: 15px;
+  margin: 0;
+  color: #8b94a1;
+}
+
+/* ================================
+   CAPABILITIES
+================================ */
+
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.capability-card {
+  min-width: 0;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 18px;
+  background: #ffffff;
+  border: 1px solid #e9e2e8;
+  border-radius: 12px;
+  transition: all .3s ease;
+}
+
+.cap-number {
+  color: #bc776b;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cap-icon {
+  color: #ed654c;
+  font-size: 25px;
+}
+
+.cap-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.capability-card h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: #26354a;
+}
+
+.capability-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #8993a1;
+  line-height: 1.7;
+}
+
+/* ================================
+   BOTTOM NOTE
+================================ */
+
+.serkayon-note {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: #fffaf8;
+  border: 1px solid #f0dfd8;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 22px;
+  color: #d75d49;
+}
+
+.serkayon-note > span {
+  font-size: 23px;
+}
+
+.serkayon-note p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #8a8990;
+  margin: 0;
+}
+
+.serkayon-note strong {
+  color: #344054;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 992px) {
+
+  .serkayon {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 4%;
+  }
+
+  .serkayon-header {
+    gap: 35px;
+  }
+
+  .serkayon-heading {
+    font-size: 46px;
+  }
+
+  .participants,
+  .outcomes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .serkayon {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 18px;
+    margin: 0;
+  }
+
+  .serkayon-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .serkayon-heading {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .serkayon-intro {
+    font-size: 15px;
+  }
+
+  .serkayon-pill {
+    font-size: 9px;
+  }
+
+  .serkayon-diagram {
+    width: 100%;
+    padding: 22px 15px;
+  }
+
+  .diagram-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .participants-network,
+  .outcomes-network {
+    padding: 0;
+  }
+
+  .participants-network::before,
+  .participants-network::after,
+  .participant-card::after,
+  .outcomes-network::before,
+  .outcomes-network::after,
+  .outcome-card::before {
+    display: none;
+  }
+
+  .participants,
+  .outcomes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .participant-card {
+    min-height: 140px;
+    padding: 18px 8px;
+    margin-bottom: 0;
+  }
+
+  .participant-card h4 {
+    font-size: 13px;
+  }
+
+  .participant-card p {
+    font-size: 11px;
+  }
+
+  .serkayon-core {
+    padding: 28px 15px;
+    margin: 20px 0;
+  }
+
+  .core-brand h3 {
+    font-size: 20px;
+  }
+
+  .core-tags {
+    gap: 8px;
+  }
+
+  .core-tags span {
+    font-size: 10px;
+    padding: 9px 12px;
+  }
+
+  .outcome-card {
+    min-height: 115px;
+    height: auto;
+    padding: 18px 8px;
+    margin-bottom: 0;
+  }
+
+  .outcome-card h4 {
+    font-size: 12px;
+  }
+
+  .outcome-card p {
+    font-size: 10px;
+  }
+
+  .capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .capability-card {
+    min-height: 120px;
+    padding: 20px 15px;
+  }
+
+  .capability-card h4 {
+    font-size: 14px;
+  }
+
+  .capability-card p {
+    font-size: 12px;
+  }
+
+  .serkayon-note {
+    padding: 18px;
+  }
+
+  .serkayon-note p {
+    font-size: 12px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 420px) {
+
+  .serkayon {
+    padding: 35px 12px;
+  }
+
+  .participants,
+  .outcomes,
+  .capabilities {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .participant-card {
+    min-height: 130px;
+  }
+
+  .outcome-card {
+    min-height: 115px;
+  }
+}

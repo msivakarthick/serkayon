@@ -1,0 +1,794 @@
+
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   MAIN HERO SECTION
+================================ */
+
+.hero-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 750px;
+  background: #fdfcfd;
+  font-family: Arial, sans-serif;
+  overflow: visible;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 42px 4.3%;
+  display: grid;
+  grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  align-items: center;
+}
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.hero-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #963d57;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+
+.eyebrow span {
+  width: 27px;
+  height: 2px;
+  background: linear-gradient(to right, #252b40, #c83d32);
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, #cf3e2c, #8b3459);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  max-width: 570px;
+  color: #758096;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.feature-icon {
+  width: 41px;
+  height: 41px;
+  border-radius: 12px;
+  background: #f5e9ed;
+  color: #9b4561;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  font-size: 13px;
+  color: #20283d;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.feature-item p {
+  font-size: 11px;
+  color: #8490a3;
+}
+
+.hero-note {
+  margin-top: 27px;
+  border: 1px dashed #e5d5dc;
+  border-radius: 9px;
+  padding: 13px;
+  color: #a35c72;
+  font-size: 11px;
+  text-align: left;
+}
+
+/* ================================
+   RIGHT SIDE PHONE
+================================ */
+
+.hero-right {
+  width: 100%;
+  min-width: 0;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curve-box {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 700px;
+  padding: 30px;
+  overflow: visible;
+  background: white;
+}
+
+.mobile-phone {
+  position: relative;
+  width: 330px;
+  height: 650px;
+  margin: 20px auto;
+  z-index: 10;
+}
+
+.phone-frame {
+  position: relative;
+  width: 100%;
+  height: 95%;
+  left: 45%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 8px solid #1e1b1d;
+  border-radius: 48px;
+  background: #171517;
+  transform: rotate(-5deg);
+  box-shadow:
+    0 35px 60px rgba(36, 26, 33, 0.22),
+    0 15px 25px rgba(36, 26, 33, 0.14),
+    inset 0 0 0 2px #454045;
+}
+
+.phone-speaker {
+  position: absolute;
+  z-index: 5;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 5px;
+  border-radius: 10px;
+  background: #292929;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #000;
+}
+
+.recordvideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ================================
+   PLAY BUTTON
+================================ */
+
+.video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 50%;
+  background: #d97706;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.5);
+  animation: playPulse 1.8s infinite;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-play-button:hover {
+  background: #b45309;
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.video-play-button:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.video-play-button span {
+  margin-left: 4px;
+  color: white;
+}
+
+@keyframes playPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 18px rgba(217, 119, 6, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0);
+  }
+}
+
+/* ================================
+   NOTIFICATIONS
+================================ */
+
+.notifications-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.notifications-container.notifications-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification-card {
+  position: absolute;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 18px 16px;
+  border-radius: 22px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(
+    105deg,
+    rgb(38, 48, 71) 0%,
+    rgb(123, 48, 77) 52%,
+    rgb(232, 70, 26) 100%
+  );
+  color: white;
+  opacity: 0;
+  transform: translateX(80px);
+}
+
+.notification-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.notification-card p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.card1 {
+  top: 200px;
+  left: 0;
+  z-index: 21;
+  animation: showOnly 0.7s ease 7.7s forwards;
+}
+
+.card2 {
+  top: 330px;
+  left: 0;
+  z-index: 21;
+  animation: showOnly 0.7s ease 9.1s forwards;
+}
+
+.card3 {
+  top: 460px;
+  left: 0;
+  z-index: 21;
+  animation: showOnly 0.7s ease 13.5s forwards;
+}
+
+/* ================================
+   NOTIFICATION ARROWS
+================================ */
+
+.notification-arrow {
+  position: absolute;
+  display: inline-block;
+  color: black;
+  font-size: 80px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(80px);
+  z-index: 22;
+  line-height: 1;
+}
+
+.arrowone {
+  top: 200px;
+  left: 186px;
+  animation: showOnly 0.7s ease 7s forwards;
+}
+
+.arrowtwo {
+  top: 320px;
+  left: 186px;
+  animation: showOnly 0.7s ease 8.4s forwards;
+}
+
+.arrowthree {
+  top: 430px;
+  left: 186px;
+  animation: showOnly 0.7s ease 13s forwards;
+}
+
+@keyframes showOnly {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (min-width: 769px) and (max-width: 1080px) {
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 45px 5%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-content {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .hero-right {
+    min-height: 650px;
+  }
+
+  .curve-box {
+    max-width: 700px;
+    min-height: 650px;
+    margin: auto;
+  }
+
+  .mobile-phone {
+    width: 280px;
+    height: 550px;
+  }
+
+  .phone-frame {
+    left: 0;
+    transform: none;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 38%;
+    left: 8%;
+    padding: 15px 13px;
+  }
+
+  .card1 {
+    top: 170px;
+    left: -10%;
+  }
+
+  .card2 {
+    top: 270px;
+    left: -10%;
+  }
+
+  .card3 {
+    top: 370px;
+    left: -10%;
+  }
+
+  .notification-heading {
+    font-size: 14px;
+  }
+
+  .notification-card p {
+    font-size: 12px;
+  }
+
+  .notification-arrow {
+    font-size: 58px;
+  }
+
+  .arrowone {
+    top: 155px;
+    left: 28%;
+  }
+
+  .arrowtwo {
+    top: 260px;
+    left: 28%;
+  }
+
+  .arrowthree {
+    top: 360px;
+    left: 28%;
+  }
+}
+
+/* ================================
+   MOBILE AND TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-container {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 35px 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-right {
+    min-height: 600px;
+  }
+
+  .curve-box {
+    min-height: 600px;
+    padding: 25px 10px;
+  }
+
+  .mobile-phone {
+    width: 250px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .phone-frame {
+    width: 250px;
+    height: 500px;
+    left: auto;
+    transform: none;
+  }
+
+  /* NOTIFICATION CARDS */
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 30%;
+    max-width: 300px;
+    left: 5%;
+    z-index: 30;
+    padding: 12px 12px;
+    border-radius: 14px;
+  }
+
+  .card1 {
+    top: 135px;
+    left: 2%;
+    animation: mobileCardAnimation 0.6s ease-out 7.7s both;
+  }
+
+  .card2 {
+    top: 215px;
+    left: 2%;
+    animation: mobileCardAnimation 0.6s ease-out 9.1s both;
+  }
+
+  .card3 {
+    top: 305px;
+    left: 2%;
+    animation: mobileCardAnimation 0.6s ease-out 13.5s both;
+  }
+
+  .notification-heading {
+    font-size: 12px;
+  }
+
+  .notification-card p {
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 5px 0 0;
+  }
+
+  /* MOBILE ARROWS */
+
+  .notification-arrow {
+    display: inline-block;
+    font-size: 48px;
+    z-index: 31;
+  }
+
+  .arrowone {
+    top: 140px;
+    left: 31%;
+    animation: mobileArrowAnimation 0.6s ease-out 7s both;
+  }
+
+  .arrowtwo {
+    top: 230px;
+    left: 31%;
+    animation: mobileArrowAnimation 0.6s ease-out 8.4s both;
+  }
+
+  .arrowthree {
+    top: 315px;
+    left: 31%;
+    animation: mobileArrowAnimation 0.6s ease-out 13s both;
+  }
+}
+
+/* ================================
+   MOBILE CARD ANIMATION
+================================ */
+
+@keyframes mobileCardAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(80px) scale(0.8);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(0) scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* MOBILE ARROW ANIMATION */
+
+@keyframes mobileArrowAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .hero-container {
+    padding: 30px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-right {
+    min-height: 550px;
+  }
+
+  .curve-box {
+    min-height: 550px;
+    padding: 20px 5px;
+  }
+
+  .mobile-phone {
+    width: 220px;
+    height: 440px;
+  }
+
+  .phone-frame {
+    width: 220px;
+    height: 440px;
+    padding: 10px;
+    border-width: 7px;
+    border-radius: 38px;
+    left: 28%;
+  }
+
+  .phone-screen {
+    border-radius: 25px;
+  }
+
+  .video-play-button {
+    width: 58px;
+    height: 58px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 40%;
+    left: -2%;
+    padding: 11px 9px;
+    border-radius: 12px;
+  }
+
+  .card1 {
+    top: 125px;
+  }
+
+  .card2 {
+    top: 210px;
+  }
+
+  .card3 {
+    top: 295px;
+  }
+
+  .notification-heading {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .notification-card p {
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .notification-arrow {
+    font-size: 40px;
+  }
+
+  .arrowone {
+    top: 145px;
+    left: 35%;
+  }
+
+  .arrowtwo {
+    top: 212px;
+    left: 35%;
+  }
+
+  .arrowthree {
+    top: 290px;
+    left: 35%;
+  }
+}
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .mobile-phone {
+    width: 195px;
+    height: 390px;
+  }
+
+  .phone-frame {
+    width: 195px;
+    height: 390px;
+    position: absolute;
+    left: 28%;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 42%;
+    left: -2%;
+    padding: 9px 8px;
+  }
+
+  .card1 {
+    top: 110px;
+  }
+
+  .card2 {
+    top: 185px;
+  }
+
+  .card3 {
+    top: 260px;
+  }
+
+  .notification-heading {
+    font-size: 10px;
+  }
+
+  .notification-card p {
+    font-size: 8px;
+  }
+
+  .notification-arrow {
+    font-size: 34px;
+  }
+
+  .arrowone {
+    top: 120px;
+    left: 36%;
+  }
+
+  .arrowtwo {
+    top: 188px;
+    left: 36%;
+  }
+
+  .arrowthree {
+    top: 258px;
+    left: 36%;
+  }
+}

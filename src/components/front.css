@@ -1,0 +1,313 @@
+/* ---------- Intro wrapper (total duration: 6s) ---------- */
+
+.front-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+  overflow: hidden;
+
+  background-color: #000;
+
+  animation: frontEntrance 6s ease-in-out forwards;
+}
+
+/* Soft light that slowly breathes behind the text */
+
+.front-glow {
+  position: absolute;
+  width: 70vmin;
+  height: 70vmin;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0) 65%
+  );
+  opacity: 0;
+  animation: glowPulse 5s ease-in-out 0.2s forwards;
+}
+
+.front-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ---------- Company name ---------- */
+
+.name {
+  margin: 0;
+  color: white;
+
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-style: oblique;
+  font-size: clamp(30px, 8vw, 100px);
+
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.name span {
+  display: inline-block;
+  opacity: 0;
+
+  animation: letterAppear 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: calc(0.4s + var(--i) * 0.15s);
+}
+
+/* ---------- Line that draws out under the name ---------- */
+
+.name-line {
+  height: 1px;
+  width: 0;
+  margin-top: clamp(12px, 2vw, 24px);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+
+  animation: lineGrow 1s ease-out 1.8s forwards;
+}
+
+/* ---------- Tagline ---------- */
+
+.tagline {
+  margin: clamp(14px, 2vw, 26px) 0 0;
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(12px, 2.2vw, 26px);
+  text-transform: uppercase;
+
+  opacity: 0;
+  animation: taglineAppear 1.1s ease-out 2.3s forwards;
+}
+
+.company-type {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.5);
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(10px, 1.4vw, 15px);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+
+  opacity: 0;
+  animation: fadeIn 0.9s ease-out 3s forwards;
+}
+
+/* ---------- Keyframes ---------- */
+
+/* Each letter slides in and comes into focus */
+
+@keyframes letterAppear {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(30px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: min(70%, 420px);
+    opacity: 1;
+  }
+}
+
+/* Letters start wide and tighten as they fade in */
+
+@keyframes taglineAppear {
+  from {
+    opacity: 0;
+    letter-spacing: 0.6em;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0.35em;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+/* Entire intro fades away (this animation triggers onFinish) */
+
+@keyframes frontEntrance {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+/* ---------- Mobile responsive ---------- */
+
+@media (max-width: 600px) {
+  .name {
+    font-size: clamp(28px, 10vw, 48px);
+    letter-spacing: 0.04em;
+  }
+
+  .tagline {
+    letter-spacing: 0.25em;
+  }
+
+  @keyframes taglineAppear {
+    from {
+      opacity: 0;
+      letter-spacing: 0.45em;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      letter-spacing: 0.25em;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Respect users who prefer less motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .name span,
+  .tagline,
+  .company-type,
+  .name-line {
+    animation-duration: 0.01s;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .front-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+  background-color: var(--cream, #FBF6EF);
+  animation: frontEntrance 2.8s ease-in-out forwards;
+}
+
+.front-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.name {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-style: oblique;
+  font-size: clamp(30px, 8vw, 100px);
+}
+@keyframes frontEntrance {
+  0% {
+    opacity: 0;
+     transform: translateY(20px) scale(0.98);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  78% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-12px) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .name {
+  font-size: clamp(30px, 8vw, 100px);
+}
+} */

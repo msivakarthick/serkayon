@@ -1,0 +1,162 @@
+.partner-admin {
+  padding: 80px 24px;
+  background: #f3ebf1;
+  margin-top: 90px;
+}
+
+.partner-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.partner-admin h1 {
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 14px;
+  color: #4f1f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.partner-intro {
+  /* max-width: 560px; */
+  margin-bottom: 24px;
+  color: #30272e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.admin-panel {
+  overflow: hidden;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(36, 26, 33, 0.12);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 13px;
+  background: #5b1e4c;
+  color: white;
+  font-size: 11px;
+}
+
+.admin-content {
+  padding: 16px;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.admin-stat {
+  padding: 12px;
+  border-radius: 7px;
+  background: #f0e8ee;
+}
+
+.admin-stat strong {
+  display: block;
+  color: #4f1f40;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.admin-stat span {
+  color: #756773;
+  font-size: 10px;
+}
+
+.admin-filters {
+  display: flex;
+  gap: 7px;
+  margin: 14px 0;
+}
+
+.filter {
+  padding: 5px 12px;
+  border: 1px solid #6b315b;
+  border-radius: 20px;
+  background: white;
+  color: #5b1e4c;
+  font-size: 10px;
+}
+
+.filter.active {
+  background: #5b1e4c;
+  color: white;
+}
+
+.admin-table {
+  width: 100%;
+}
+
+.admin-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.7fr 1.2fr 0.8fr 0.8fr;
+  align-items: center;
+  min-height: 34px;
+  border-bottom: 1px solid #e9dfe6;
+  color: #40363e;
+  font-size: 10px;
+}
+
+.admin-table-head {
+  color: #604c5b;
+  font-weight: 700;
+}
+
+.admin-row a {
+  color: #4f1f40;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.admin-row b {
+  padding: 3px 7px;
+  border-radius: 10px;
+  font-size: 9px;
+}
+
+.active-status {
+  background: #dff3ec;
+  color: #27816d;
+}
+
+.alert-status {
+  background: #f8dada;
+  color: #bd4a4a;
+}
+
+.renew-status {
+  background: #f9e7c7;
+  color: #a56813;
+}
+
+.admin-note {
+  max-width: 550px;
+  margin-top: 12px;
+  color: #7c6d77;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-table {
+    overflow-x: auto;
+  }
+
+  .admin-row {
+    min-width: 650px;
+  }
+}

@@ -1,0 +1,366 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+.partnerships-section {
+  width: 100%;
+  padding: 60px 5%;
+  background: #edf3f9;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+.partnerships-container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 35px;
+}
+
+/* Left Content */
+
+.partnerships-content {
+  max-width: 480px;
+}
+
+.partnerships-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2879bd;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.partnerships-content h1 {
+  color: #183653;
+  font-size: clamp(30px, 3.5vw, 43px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.partnerships-content h1 span {
+  display: block;
+  color: #e34d5c;
+}
+
+.partnerships-content > p:not(.partnerships-label) {
+  color: #60758a;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Button */
+
+.partnerships-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #2879bd;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.partnerships-button:hover {
+  background: #e34d5c;
+  transform: translateY(-3px);
+}
+
+/* Right Diagram */
+
+.partnerships-visual {
+  width: 100%;
+  max-width: 650px;
+  aspect-ratio: 1 / 0.88;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Orbit */
+
+.partnership-orbit {
+  position: absolute;
+  width: 76%;
+  aspect-ratio: 1;
+  border: 3px solid #8bbce3;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Partner Cards */
+
+.partner-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 180px;
+  min-height: 125px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #dce7f1;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(24, 54, 83, 0.09);
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  border-color: #8bbce3;
+}
+
+.partner-card > svg {
+  color: #2879bd;
+  font-size: 26px;
+  margin-bottom: 7px;
+}
+
+.partner-card h3 {
+  color: #183653;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.partner-card p {
+  color: #64798d;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Card Positions */
+
+.partner-oem {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+}
+
+.partner-system {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.partner-sensor {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.partner-consultants {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end;
+}
+
+.partner-global {
+  grid-column: 3;
+  grid-row: 3;
+  align-self: end;
+}
+
+/* Center Circle */
+
+.partnership-center {
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 3;
+  width: 175px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(145deg, #2879bd, #183653);
+  border: 5px solid #fff;
+  box-shadow: 0 8px 22px rgba(24, 54, 83, 0.2);
+  color: #fff;
+}
+
+.partnership-center > svg {
+  font-size: 35px;
+  margin-bottom: 7px;
+  color: #fff;
+}
+
+.partnership-center h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 9px;
+}
+
+.partnership-center p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: #e0edfa;
+}
+
+/* Bottom CTA */
+
+.partnerships-cta {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 28px 30px;
+  background: #183653;
+  border-left: 5px solid #e34d5c;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.partnerships-cta h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+.partnerships-cta h3 {
+  color: #ff8790;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+.partnerships-cta p {
+  color: #d1dfed;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+  font-weight: 500;
+}
+
+.mobile-partner-arrow {
+  display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .partnerships-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .partnerships-content {
+    max-width: 650px;
+  }
+
+  .partnerships-visual {
+    max-width: 650px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .partnerships-section {
+    padding: 40px 5%;
+  }
+
+  .partnerships-content h1 {
+    font-size: 30px;
+  }
+
+  .partnerships-content > p:not(.partnerships-label) {
+    font-size: 13px;
+  }
+
+  .partnerships-visual {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 10px 0;
+  }
+
+  .partnership-orbit {
+    display: none;
+  }
+
+  .partner-card {
+    max-width: 100%;
+    min-height: 0;
+    padding: 17px;
+  }
+
+  .partner-card > svg {
+    font-size: 23px;
+  }
+
+  .partnership-center {
+    order: -1;
+    width: 155px;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+  }
+
+  .partnership-center h2 {
+    font-size: 18px;
+  }
+
+  .partner-card h3 {
+    font-size: 13px;
+  }
+
+  .partner-card p {
+    font-size: 11px;
+  }
+
+  .mobile-partner-arrow {
+    display: block;
+    color: #e34d5c;
+    font-size: 20px;
+    transform: rotate(90deg);
+  }
+
+  .partnerships-cta {
+    margin-top: 25px;
+    padding: 22px 18px;
+  }
+
+  .partnerships-cta h2 {
+    font-size: 19px;
+  }
+
+  .partnerships-cta h3 {
+    font-size: 15px;
+  }
+
+  .partnerships-cta p {
+    font-size: 12px;
+  }
+}

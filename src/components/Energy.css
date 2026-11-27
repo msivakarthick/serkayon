@@ -1,0 +1,19 @@
+import "./Energy.css"; 
+ 
+function Energy(){ 
+    return( 
+        <section> 
+            <div className="verticals"> 
+                <div className="energy"> 
+                    <h1>Enegry</h1> 
+                </div> 
+                <div className="Water"> 
+                    <h1>Water</h1> 
+                </div> 
+                <div className="Traceability"> 
+                    <h1>Traceability</h1> 
+                </div> 
+            </div> 
+        </section> 
+    ) 
+} ipo correct ah

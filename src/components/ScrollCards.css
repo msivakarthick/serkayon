@@ -1,0 +1,598 @@
+
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   MAIN PAGE
+================================ */
+
+.page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: auto;
+  padding: 0 2.5% 100px;
+  overflow: visible;
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #202a40;
+}
+
+/* ================================
+   INTRO
+================================ */
+
+.intro {
+  padding: 80px 220px 45px;
+  text-align: left;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #963d57;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+
+.intro h1 {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.intro h1 span {
+  background: linear-gradient(
+    105deg,
+    rgb(38, 48, 71) 0%,
+    rgb(123, 48, 77) 52%,
+    rgb(232, 70, 26) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.description {
+  margin-top: 20px;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* ================================
+   STICKY STACKING BOXES
+================================ */
+
+.energy-box {
+  position: sticky;
+  top: 125px;
+  z-index: 1;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 25px 35px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 35px;
+
+  background: #fff;
+  border: 1px solid #e9e6eb;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(40,30,50,0.12);
+  margin-bottom: 0;
+}
+
+/* STACKING ORDER */
+
+.card-1 {
+  z-index: 1;
+}
+
+.card-2 {
+  z-index: 2;
+}
+
+.card-3 {
+  z-index: 3;
+}
+
+.card-4 {
+  z-index: 4;
+}
+
+.card-5 {
+  z-index: 5;
+}
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.energy-content {
+  min-width: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.energy-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #999eac;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.energy-label span:first-child {
+  color: #b27d91;
+}
+
+.energy-label i {
+  height: 14px;
+  width: 1px;
+  background: #ddd;
+}
+
+.energy-content h2 {
+  font-size: 35px;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.energy-content h3 {
+  color: #99465f;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.energy-content p {
+  max-width: 450px;
+  color: #858a99;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ================================
+   TAGS
+================================ */
+
+.energy-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.energy-tags span {
+  font-size: 15px;
+  color: #7b8090;
+}
+
+/* ================================
+   LINK
+================================ */
+
+.energy-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #d7a1b1;
+  color: #98455f;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.energy-dashboard {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 365px;
+  border: 1px solid #e9e6eb;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ================================
+   DASHBOARD HEADER
+================================ */
+
+.dashboard-header {
+  height: 40px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeedf0;
+}
+
+.live-status,
+.live-view {
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: .7px;
+  color: #9298a8;
+}
+
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #18a87e;
+}
+
+/* ================================
+   DASHBOARD BODY
+================================ */
+
+.dashboard-body {
+  min-width: 0;
+  padding: 22px 20px 15px;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-label {
+  color: #a0a5b2;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.dashboard-top h2 {
+  margin-top: 9px;
+  font-size: 16px;
+}
+
+.energy-icon {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #f5eaf0;
+  color: #a34868;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* ================================
+   CHART
+================================ */
+
+.chart-area {
+  position: relative;
+  height: 150px;
+  margin-top: 13px;
+  border-bottom: 1px solid #eeedf0;
+}
+
+.chart-grid {
+  position: absolute;
+  inset: 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-grid div {
+  border-top: 1px solid #f5f4f6;
+}
+
+.chart-bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 0 6px;
+}
+
+.chart-bar {
+  flex: 1;
+  min-width: 0;
+  background: #d8c7d0;
+  border-radius: 4px 4px 0 0;
+  transform-origin: bottom;
+  animation: barGrow .9s ease both;
+}
+
+.chart-bar.highlight,
+.chart-bar.medium {
+  background: #b77e96;
+}
+
+.chart-bar.current {
+  background: linear-gradient(
+    to top,
+    #a83b56,
+    #f47c43
+  );
+}
+
+@keyframes barGrow {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* ================================
+   CHART TIME
+================================ */
+
+.chart-times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #a0a5b2;
+  font-size: 8px;
+}
+
+/* ================================
+   DASHBOARD FOOTER
+================================ */
+
+.dashboard-footer {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #eeedf0;
+  margin-top: 17px;
+  padding-top: 13px;
+}
+
+.dashboard-footer span {
+  font-size: 8px;
+  color: #9298a8;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 3% 70px;
+  }
+
+  .intro {
+    padding: 60px 8% 40px;
+  }
+
+  .energy-box {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    animation: none !important;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+    margin: 0 auto 25px;
+  }
+
+  .energy-box * {
+    animation: none !important;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px 60px;
+  }
+
+  .intro {
+    padding: 45px 10px 35px;
+  }
+
+  .intro h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .energy-box {
+    width: 100%;
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .energy-content {
+    padding: 0;
+  }
+
+  .energy-content h2 {
+    font-size: 30px;
+  }
+
+  .energy-content h3 {
+    font-size: 18px;
+  }
+
+  .energy-content p {
+    font-size: 14px;
+  }
+
+  .energy-tags span {
+    font-size: 13px;
+  }
+
+  .energy-dashboard {
+    min-height: auto;
+  }
+
+  .dashboard-body {
+    padding: 18px 15px;
+  }
+
+  .chart-bars {
+    gap: 4px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .page {
+    padding: 0 12px 50px;
+  }
+
+  .intro {
+    padding: 40px 5px 30px;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .energy-box {
+    width: 100%;
+    padding: 18px;
+    top: auto;
+  }
+
+  .energy-content h2 {
+    font-size: 27px;
+  }
+
+  .energy-content h3 {
+    font-size: 17px;
+  }
+
+  .energy-content p {
+    font-size: 13px;
+  }
+
+  .energy-label {
+    font-size: 8px;
+  }
+
+  .dashboard-header {
+    padding: 0 10px;
+  }
+
+  .dashboard-body {
+    padding: 18px 12px;
+  }
+
+  .dashboard-top h2 {
+    font-size: 14px;
+  }
+
+  .chart-area {
+    height: 130px;
+  }
+
+  .chart-bars {
+    gap: 3px;
+    padding: 0 3px;
+  }
+
+  .dashboard-footer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================
+   SMALL TEXT / ICON HELPERS
+================================ */
+
+.card-title {
+  font-size: 40px;
+}
+
+.bold {
+  margin-right: 8px;
+}
+
+.arrow {
+  transform: rotate(15deg);
+}

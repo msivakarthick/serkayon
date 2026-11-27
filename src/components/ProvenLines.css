@@ -1,0 +1,85 @@
+.proven-lines {
+  padding: 75px 24px;
+  background: #fbf9f7;
+}
+
+.proven-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.proven-lines h1 {
+  margin-bottom: 18px;
+  color: #4f1f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 500;
+}
+
+.proven-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.proven-stats strong {
+  display: block;
+  color: #4f1f40;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.proven-stats span {
+  display: block;
+  margin-top: 2px;
+  color: #786b75;
+  font-size: 10px;
+}
+
+.proven-text {
+max-width: 800px;
+  margin-bottom: 16px;
+  color: #40363e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* .proven-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 160px;
+
+  border-radius: 8px;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #eee7ec 0px,
+      #eee7ec 8px,
+      #f8f3f6 8px,
+      #f8f3f6 16px
+    );
+}
+
+.proven-placeholder span {
+  color: #837581;
+  font-size: 11px;
+  text-align: center;
+} */
+
+@media (max-width: 650px) {
+  .proven-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proven-lines h1{
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+}

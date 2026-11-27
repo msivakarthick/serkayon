@@ -1,0 +1,895 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap');
+/* =========================================
+   MAIN SECTION
+========================================= */
+.plant-network-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 60px);
+  padding-top:40px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin:0 20px ;
+}
+
+.plant-network-section * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LEFT SIDE - CONTENT
+========================================= */
+
+.plant-network-content {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.plant-network-label {
+  margin: 0 0 14px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  color: #dd2828;
+  font-family: clamp(2.2rem, 5vw, 3.5rem)s;
+}
+.plant-network-content h2 {
+  margin: 0 0 20px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.15;
+  overflow-wrap: break-word;
+  color: #80456e;
+}
+
+.plant-network-description {
+  max-width: 550px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555555;
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.plant-network-visual {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 50%;
+}
+
+/* =========================================
+   NETWORK VIDEO
+========================================= */
+
+.plant-network-video {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.plant-network-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+/* =========================================
+   LADY + NOTIFICATION AREA
+========================================= */
+
+.mobile-monitor-animation {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 300px;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+}
+
+/* =========================================
+   LADY IMAGE - RESPONSIVE BASE
+========================================= */
+
+.lady-mobile-image {
+  display: block;
+  position: absolute;
+  top: 41%;
+  left: 2%;
+  margin-top: 0;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 1;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+/* =========================================
+   NOTIFICATION POPUP
+========================================= */
+
+.plant-notification-popup {
+  position: absolute;
+  z-index: 3;
+  top: 0%;
+  left: 45%;
+  width: min(310px, 58%);
+  height: 280px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.94);
+  transform-origin: top left;
+
+  animation: notificationPopupLoop 3s ease-in-out infinite;
+}
+
+/* =========================================
+   SVG SPEECH BUBBLE
+========================================= */
+
+.notification-bubble-svg {
+  position: absolute;
+  inset: 0;
+  top: -13%;
+  left: -5%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   NOTIFICATION CONTENT
+========================================= */
+
+.notification-bubble-content {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  width: 80%;
+  z-index: 1;
+}
+
+/* =========================================
+   POPUP HEADER
+========================================= */
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #17212b;
+}
+
+.notification-live {
+  flex-shrink: 0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #18a878;
+}
+
+.notification-bubble-content .notification-header {
+  margin-bottom: 7px;
+  font-size: 11px;
+}
+
+/* =========================================
+   PLANT STATUS ROWS
+========================================= */
+
+.plant-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 9px;
+  margin-top: 6px;
+  border-radius: 9px;
+  background: #f5f7f8;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(12px);
+}
+
+.plant-status-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.plant-status strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #17212b;
+}
+
+.plant-status small {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  color: #6b747b;
+}
+
+/* SVG BUBBLE ROWS */
+
+.notification-bubble-content .plant-status {
+  gap: 7px;
+  padding: 7px 6px;
+  margin-top: 5px;
+  border-radius: 7px;
+}
+
+.notification-bubble-content .plant-status strong {
+  font-size: 10px;
+}
+
+.notification-bubble-content .plant-status small {
+  font-size: 9px;
+}
+
+/* =========================================
+   STATUS DOTS
+========================================= */
+
+.status-indicator {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+}
+
+.plant-good .status-indicator {
+  background: #20b486;
+}
+
+.plant-issue .status-indicator {
+  background: #e58b32;
+}
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes notificationPopupLoop {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px) scale(0.94);
+  }
+
+  8% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  78% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  90% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-7px) scale(0.98);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px) scale(0.94);
+  }
+}
+
+/* =========================================
+   PLANT 1
+========================================= */
+
+.plant-one {
+  animation: plantOneNotification 3s ease-in-out infinite;
+}
+
+@keyframes plantOneNotification {
+  0%, 8% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(12px);
+  }
+
+  15%, 78% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  88%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-5px);
+  }
+}
+
+/* =========================================
+   PLANT 2
+========================================= */
+
+.plant-two {
+  animation: plantTwoNotification 3s ease-in-out infinite;
+}
+
+@keyframes plantTwoNotification {
+  0%, 25% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(12px);
+  }
+
+  32%, 78% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  88%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-5px);
+  }
+}
+
+/* =========================================
+   PLANT 3
+========================================= */
+
+.plant-three {
+  animation: plantThreeNotification 3s ease-in-out infinite;
+}
+
+@keyframes plantThreeNotification {
+  0%, 43% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(12px);
+  }
+
+  50%, 78% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  88%, 100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-5px);
+  }
+}
+
+/* =========================================
+   LAPTOP / SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1100px) {
+  .plant-network-section {
+    gap: 28px;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-bottom: 80px;
+  }
+  .notification-bubble-svg{
+    top:0%;
+  }
+  .notification-bubble-content {
+    top:11%;
+    left:5%;
+  }
+  .plant-network-content h2 {
+    font-size: clamp(29px, 3.5vw, 38px);
+  }
+
+  .plant-network-description {
+    font-size: 16px;
+  }
+
+  .lady-mobile-image {
+    top: 43%;
+    left: 3%;
+    max-width: 280px;
+  }
+
+  .plant-notification-popup {
+    top: -8%;
+    left: 48%;
+    width: min(290px, 52%);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .plant-network-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    padding: 50px 6%;
+    padding-bottom: 90px;
+  }
+
+  .plant-network-content,
+  .plant-network-visual {
+    width: 100%;
+    flex: none;
+    min-width: 0;
+  }
+
+  .plant-network-content h2 {
+    font-size: clamp(32px, 5vw, 42px);
+  }
+
+  .plant-network-description {
+    max-width: 650px;
+    font-size: 16px;
+  }
+
+  .plant-network-visual {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .plant-network-video video {
+    max-height: 380px;
+    margin: 0 auto;
+  }
+
+  .mobile-monitor-animation {
+    margin-top: 24px;
+    min-height: 280px;
+  }
+
+  .lady-mobile-image {
+    top: 50%;
+    left: 18%;
+    width: 85%;
+    max-width: 280px;
+  }
+
+  .plant-notification-popup {
+    top: -5%;
+    left: 53%;
+    width: min(290px, 48%);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+  .plant-network-section {
+    padding: 38px 18px;
+    gap: 25px;
+    padding-bottom: 90px;
+  }
+
+  .plant-network-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .plant-network-content h2 {
+    font-size: clamp(29px, 8vw, 36px);
+    margin-bottom: 15px;
+  }
+
+  .plant-network-description {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .plant-network-video {
+    border-radius: 10px;
+  }
+
+  .plant-network-video video {
+    max-height: none;
+  }
+
+  .mobile-monitor-animation {
+    margin-top: 20px;
+    min-height: 260px;
+  }
+
+  .lady-mobile-image {
+    top: 47%;
+    left: 5%;
+    width: 78%;
+    max-width: 250px;
+  }
+
+  .plant-notification-popup {
+    top: 0%;
+    left: 48%;
+    width: 50%;
+    max-width: 210px;
+    height: 240px;
+  }
+
+  .notification-bubble-svg {
+    top: 0%;
+    left: 0%;
+  }
+
+  .notification-bubble-content {
+    top: 12%;
+    left: 10%;
+    width: 80%;
+  }
+
+  .notification-bubble-content .notification-header {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+
+  .notification-live {
+    font-size: 7px;
+  }
+
+  .notification-bubble-content .plant-status {
+    gap: 4px;
+    padding: 5px 4px;
+    margin-top: 4px;
+  }
+
+  .notification-bubble-content .plant-status strong {
+    font-size: 9px;
+  }
+
+  .notification-bubble-content .plant-status small {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .plant-network-section {
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 100px;
+  }
+
+  .plant-network-content h2 {
+    font-size: 28px;
+  }
+
+  .mobile-monitor-animation {
+    min-height: 230px;
+  }
+
+  .lady-mobile-image {
+    top: 47%;
+    left: -10%;
+    width: 78%;
+    max-width: 220px;
+  }
+
+  .plant-notification-popup {
+    top: 0%;
+    left: 46%;
+    width: 53%;
+    height: 225px;
+  }
+
+  .plant-status {
+    gap: 5px;
+    padding: 6px 5px;
+  }
+
+  .notification-bubble-content .plant-status small {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .plant-notification-popup,
+  .plant-one,
+  .plant-two,
+  .plant-three {
+    animation: none;
+  }
+
+  .plant-notification-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .plant-status {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.changing-word {
+  display: inline-grid;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 1.3em;
+}
+
+.changing-word span {
+  grid-area: 1 / 1;
+  display: block;
+  opacity: 0;
+  transform: translateY(-18px);
+  animation: smoothWordChange 9s ease-in-out infinite both;
+}
+
+.changing-word span:nth-child(1) {
+  animation-delay: 0s;
+  text-align: left;
+}
+
+.changing-word span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.changing-word span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes smoothWordChange {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  8% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  33.33% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+}
+.sec {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 90px;
+  text-align: center;
+  background: linear-gradient(135deg, #f1e9ee, #ffffff);
+}
+
+.sec h1 {
+  max-width: 850px;
+  margin: 0 auto 24px;
+  color: #241a21;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.sec .lead {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: #6d5f69;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 14px 15px;
+  border: 1px solid #4f1f40;
+  border-radius: 5px;
+  background: #4f1f40;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.cta .btn:hover {
+  background: #6a2b56;
+}
+
+.cta .btn.alt {
+  background: transparent;
+  color: #4f1f40;
+}
+
+.cta .btn.alt:hover {
+  background: #f1e9ee;
+}
+
+@media (max-width: 600px) {
+  .sec {
+    padding: 65px 20px;
+  }
+
+  .sec h1 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+  }
+
+  .sec .lead {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .cta .btn {
+    /* width: 100%; */
+    max-width: 340px;
+  }
+}
+.connect{
+  color: purple;
+}
+.efficient{
+  color:brown;
+  text-align: left;
+}
+/* CTA Buttons */
+.cta .btn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Popup Box */
+.popup-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.popup-box h2 {
+  color: #263b35;
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+
+.popup-box p {
+  color: #68736e;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* Close Button */
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Input Fields */
+.popup-box input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #d5dfd9;
+  border-radius: 7px;
+  outline: none;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.popup-box input:focus {
+  border-color: #168044;
+}
+
+/* Submit Button */
+.popup-submit {
+  width: 100%;
+  padding: 13px;
+  background: #168044;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.popup-submit:hover {
+  background: #116537;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .popup-box {
+    padding: 30px 20px;
+  }
+
+  .popup-box h2 {
+    font-size: 20px;
+  }
+}

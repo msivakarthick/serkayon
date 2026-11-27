@@ -1,0 +1,186 @@
+.loss-section {
+  padding: 80px 24px;
+  background: #f1e9ee;
+}
+
+.loss-section .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loss-section .eyebrow {
+  margin-bottom: 14px;
+  color: #4f1f40;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.loss-section h2 {
+  margin-bottom: 20px;
+  color: #241a21;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.loss-section .section-intro {
+  /* max-width: 700px; */
+  margin-bottom: 36px;
+  color: #6d5f69;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Cards */
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  padding: 30px;
+  border: 1px solid #e3d7df;
+  border-radius: 12px;
+  background: #ffffff;
+
+  box-shadow: 0 8px 24px rgba(36, 26, 33, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(36, 26, 33, 0.14);
+}
+
+.card h3 {
+  margin-bottom: 14px;
+  color: #241a21;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.card p {
+  margin-bottom: 15px;
+  color: #6d5f69;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.card .loss {
+  color: #4f1f40;
+  font-weight: 600;
+}
+
+/* What Serkayon shows */
+
+.card .see {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e3d7df;
+}
+
+.card .see b {
+  display: block;
+  margin-bottom: 8px;
+  color: #4f1f40;
+  font-size: 14px;
+}
+
+.card .see p {
+  margin-bottom: 0;
+}
+
+/* Bottom note */
+
+.loss-section .chat {
+  margin-top: 30px;
+  color: #6d5f69;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .loss-section {
+    padding: 60px 20px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
+
+/* .line h1,.line > p {
+  text-align: left;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.line > p:nth-of-type(2) {
+  text-align: center;
+}
+
+.chat {
+  width: 100%;
+  padding: 20px;
+}
+
+.phone {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 20px;
+  border: 10px solid black;
+}
+
+
+.box {
+  background-color: aliceblue;
+  padding: 20px;
+  text-align: left;
+}
+
+.box > p:nth-of-type(1) {
+  color: orange;
+}
+
+.box > p:nth-of-type(2) {
+  color: brown;
+  margin-top: 10px;
+}
+
+.phone > p {
+  text-align: left;
+}
+
+table {
+  margin: 0 auto;
+  background-color: #6d5f69;
+}
+
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .phone {
+    width: 90%;
+  }
+} */

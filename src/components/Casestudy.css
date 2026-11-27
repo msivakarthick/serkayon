@@ -1,0 +1,321 @@
+/* Main section */
+.case-study {
+  padding: 40px 20px;
+  background-color: #f7eff6;
+  overflow: hidden;
+}
+
+.case-study * {
+  box-sizing: border-box;
+}
+
+/* Case Study title box */
+.case-title {
+  background-color: #63345f;
+  color: white;
+  padding: 25px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(99, 52, 95, 0.15);
+}
+
+.case-title h1 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Case Study paragraphs */
+.case-details p {
+  color: #f8eaf5;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.case-details p:last-child {
+  border-bottom: none;
+}
+
+/* Verticals heading */
+.verti {
+  background-color: #e7b2d4;
+  color: #572444;
+  padding: 15px 20px;
+  width: 190px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 35px auto 25px;
+}
+
+.verti h1 {
+  color: #572444;
+  font-size: 24px;
+}
+
+/* Desktop layout */
+.verticals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Energy, Water, Traceability boxes */
+.energy,
+.water,
+.traceability {
+  background-color: #9362a8;
+  color: white;
+  padding: 20px 12px;
+  width: 190px;
+  flex-shrink: 0;
+  margin: 8px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 14px rgba(99, 52, 95, 0.12);
+}
+
+.energy h2,
+.water h2,
+.traceability h2 {
+  color: white;
+  font-size: 21px;
+}
+
+/* Paragraphs inside vertical boxes */
+.energy p,
+.water p,
+.traceability p {
+  color: #fff3ff;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Initial animation state: boxes */
+.case-study .verti,
+.case-study .energy,
+.case-study .water,
+.case-study .traceability {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+/* Verticals heading animation */
+.case-study.scroll-visible .verti {
+  animation: headingAppear 0.6s ease 0.2s both;
+}
+
+/* Energy box animation */
+.case-study.scroll-visible .energy {
+  animation: energyAppear 0.6s ease 0.5s both;
+}
+
+/* Water box animation */
+.case-study.scroll-visible .water {
+  animation: waterAppear 0.6s ease 1.4s both;
+}
+
+/* Traceability box animation */
+.case-study.scroll-visible .traceability {
+  animation: traceabilityAppear 0.6s ease 2.8s both;
+}
+
+/* ==================================
+   FIRST ARROW - DESKTOP
+================================== */
+
+.arrow-one {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 35px;
+  line-height: 1;
+  color: #63345f;
+  opacity: 0;
+  transform: translateX(-15px);
+}
+
+.case-study.scroll-visible .arrow-one {
+  animation: firstArrowMove 0.6s ease 0.9s both;
+}
+
+@keyframes firstArrowMove {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================================
+   SECOND ARROW - DESKTOP
+================================== */
+
+.arrow-two {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 35px;
+  line-height: 1;
+  color: #63345f;
+  opacity: 0;
+  transform: translateX(-15px);
+}
+
+.case-study.scroll-visible .arrow-two {
+  animation: secondArrowMove 0.6s ease 2.2s both;
+}
+
+@keyframes secondArrowMove {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================================
+   BOX ANIMATIONS
+================================== */
+
+@keyframes headingAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes energyAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waterAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes traceabilityAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================
+   MOBILE VIEW
+================================== */
+
+@media (max-width: 768px) {
+  .case-study {
+    padding: 30px 15px;
+  }
+
+  .case-title {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px 12px;
+  }
+
+  .case-title h1 {
+    font-size: 24px;
+  }
+
+  .case-details p {
+    font-size: 13px;
+    padding: 8px 2px;
+  }
+
+  .verticals {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .energy,
+  .water,
+  .traceability {
+    width: 190px;
+    margin: 8px 0;
+  }
+
+  /* First arrow - mobile */
+  .arrow-one {
+    margin: 12px 0;
+  }
+
+  .case-study.scroll-visible .arrow-one {
+    animation: firstArrowDown 0.6s ease 0.9s both;
+  }
+
+  @keyframes firstArrowDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px) rotate(90deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+
+  /* Second arrow - mobile */
+  .arrow-two {
+    margin: 12px 0;
+  }
+
+  .case-study.scroll-visible .arrow-two {
+    animation: secondArrowDown 0.6s ease 2.2s both;
+  }
+
+  @keyframes secondArrowDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px) rotate(90deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+}

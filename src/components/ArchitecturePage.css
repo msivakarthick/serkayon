@@ -1,0 +1,412 @@
+
+.architecture-page {
+  width: 100%;
+  padding: 30px 2.3%;
+  background: #faf9fa;
+  color: #22283a;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.architecture-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e8e5e8;
+}
+
+.architecture-eyebrow {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #8c405b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.architecture-header h2 {
+  margin: 0;
+  color: #211e2b;
+  font-size: 60px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  text-align: left;
+}
+
+.architecture-cloud {
+  border: 1px solid #e7dce2;
+  color: #8c405b;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+/* PROCESS CARDS */
+
+.architecture-process {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.architecture-process-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.architecture-card {
+  width: 100%;
+  min-width: 0;
+  height: 155px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e9e6ea;
+  border-radius: 11px;
+  box-shadow: 0 5px 18px rgba(20, 20, 30, 0.04);
+  box-sizing: border-box;
+}
+
+.architecture-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.architecture-card-top span {
+  color: #aeb2c1;
+  font-size: 9px;
+}
+
+.architecture-card-top strong {
+  color: #a44a61;
+  font-size: 19px;
+}
+
+.architecture-card h3 {
+  font-size: 15px;
+  margin: 8px 0 10px;
+}
+
+.architecture-card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #747887;
+  margin: 0;
+}
+
+.architecture-arrow {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translate(50%, -50%);
+  color: #c65d67;
+  font-size: 17px;
+  z-index: 3;
+}
+
+/* DARK HIERARCHY PANEL */
+
+.architecture-dark-panel {
+  background: #222a3d;
+  color: white;
+  padding: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.architecture-panel-heading {
+  color: #e9a18b;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.architecture-hierarchy {
+  position: relative;
+  border: 1px solid #41495b;
+  border-radius: 9px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+/* ROWS */
+
+.architecture-row {
+  position: relative;
+  min-height: 55px;
+  display: flex;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.architecture-row-label {
+  width: 36%;
+  padding-top: 12px;
+  color: #e99c83;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.architecture-items {
+  width: 64%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 9px;
+  position: relative;
+}
+
+.architecture-node {
+  min-width: 75px;
+  padding: 9px 10px;
+  background: #343e53;
+  border: 1px solid #4b566c;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+/* BRAND STRIP */
+
+.architecture-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid #a65d69;
+  background: linear-gradient(100deg, #493044, #54343f);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.architecture-brand-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6e385b, #d45b43);
+  border-radius: 8px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.architecture-brand h4 {
+  font-size: 12px;
+  margin: 0 0 5px;
+  text-align: left;
+}
+
+.architecture-brand p {
+  font-size: 12px;
+  margin: 0;
+  color: #e0d4dc;
+}
+
+/* PARTNERS */
+
+.architecture-partners {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.architecture-partners span {
+  padding: 9px 15px;
+  border: 1px solid #566075;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.architecture-partner-caption {
+  text-align: center;
+  color: #d5b5c3;
+  font-size: 12px;
+  margin: 8px 0 16px;
+}
+
+/* FEATURES */
+
+.architecture-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #41495b;
+}
+
+.architecture-features span {
+  font-size: 12px;
+  color: #f1e6e9;
+}
+
+.architecture-features span::first-letter {
+  color: #e99c83;
+}
+
+/* BOTTOM NOTE */
+
+.architecture-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 1400px;
+  margin: 25px auto 0;
+}
+
+.architecture-note span {
+  color: #c65d67;
+}
+
+.architecture-note p {
+  color: #858998;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .architecture-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .architecture-arrow {
+    display: none;
+  }
+
+  .architecture-card {
+    height: 150px;
+  }
+
+  .architecture-row-label {
+    width: 30%;
+  }
+
+  .architecture-items {
+    width: 70%;
+  }
+
+  .architecture-connectors {
+    left: 30%;
+    width: 70%;
+  }
+
+  .architecture-node {
+    min-width: 55px;
+    padding: 8px 5px;
+    font-size: 8px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .architecture-page {
+    padding: 20px 14px;
+  }
+
+  .architecture-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .architecture-header h2 {
+    font-size: 19px;
+  }
+
+  .architecture-cloud {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .architecture-process {
+    grid-template-columns: 1fr;
+  }
+
+  .architecture-card {
+    width: 100%;
+    height: auto;
+    min-height: 125px;
+  }
+
+  .architecture-card h3 {
+    margin-top: 15px;
+  }
+
+  .architecture-arrow {
+    display: none;
+  }
+
+  .architecture-dark-panel {
+    padding: 12px;
+  }
+
+  .architecture-hierarchy {
+    padding: 12px 8px;
+  }
+
+  .architecture-row {
+    min-height: 75px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .architecture-row-label {
+    width: 100%;
+    padding-top: 5px;
+    font-size: 8px;
+  }
+
+  .architecture-items {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .architecture-node {
+    min-width: 0;
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 8px;
+  }
+
+  .architecture-connectors {
+    display: none;
+  }
+
+  .architecture-brand {
+    margin-top: 12px;
+    padding: 11px;
+  }
+
+  .architecture-brand p {
+    line-height: 1.5;
+  }
+
+  .architecture-features {
+    text-align: center;
+    gap: 12px;
+  }
+
+  .architecture-note {
+    margin-top: 18px;
+  }
+}

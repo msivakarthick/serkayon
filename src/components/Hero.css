@@ -1,0 +1,87 @@
+.sec {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 90px;
+  text-align: center;
+  background: linear-gradient(135deg, #f1e9ee, #ffffff);
+}
+
+.sec h1 {
+  max-width: 850px;
+  margin: 0 auto 24px;
+  color: #241a21;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.sec .lead {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: #6d5f69;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border: 1px solid #4f1f40;
+  border-radius: 5px;
+  background: #4f1f40;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.cta .btn:hover {
+  background: #6a2b56;
+}
+
+.cta .btn.alt {
+  background: transparent;
+  color: #4f1f40;
+}
+
+.cta .btn.alt:hover {
+  background: #f1e9ee;
+}
+
+@media (max-width: 600px) {
+  .sec {
+    padding: 65px 20px;
+  }
+
+  .sec h1 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+  }
+
+  .sec .lead {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .cta .btn {
+    /* width: 100%; */
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,423 @@
+.sk-root {
+  --bg: #1e3a30;
+  --band: #849273;
+  --card: #cdb991;
+  --ink: #17251f;
+  --cream: #f5ecdc;
+  --white: #ffffff;
+  --line: #f5f1e8;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+}
+
+.sk-root * {
+  box-sizing: border-box;
+}
+
+.sk-wrap {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.sk-root h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--cream);
+  text-align: center;
+  font-size: clamp(32px, 3.8vw, 56px);
+  margin: 0 0 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* LOGO */
+
+.sk-logo {
+  display: block;
+  margin: 0 auto;
+  width: 222px;
+  text-align: center;
+  padding: 9px 0;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    #1b2a5c,
+    #2a2f6e 55%,
+    #e8431a
+  );
+}
+
+.sk-vline {
+  width: 2px;
+  height: 28px;
+  background: var(--line);
+  margin: 0 auto;
+}
+
+/* MAIN BAND */
+
+.sk-band {
+  display: grid;
+  grid-template-columns: 24% 1fr;
+  gap: 12px;
+  background: var(--band);
+  border-radius: 12px;
+  padding: 13px 18px;
+  margin-bottom: 12px;
+  align-items: center;
+  position: relative;
+}
+
+/* LEFT LABEL */
+
+.sk-lbl {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.sk-ico {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eee9e1;
+  color: #202720;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.sk-label-text {
+  min-width: 0;
+}
+
+.sk-lbl b {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.sk-lbl span {
+  display: block;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+/* LICENSING PILL */
+
+.sk-partner-band {
+  grid-template-columns: 24% 1fr;
+}
+
+.sk-pill {
+  background: #fafafa;
+  color: #203c30;
+  border-radius: 60px;
+  padding: 10px 30px;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.sk-pill > svg {
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+.sk-pill b {
+  display: block;
+  font-size: 23px;
+}
+
+.sk-pill span {
+  display: block;
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+/* THREE COMPANY COLUMNS */
+
+.sk-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 6fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+/* COLUMN */
+
+.sk-col {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-items: stretch;
+  min-width: 0;
+  padding-top: 16px;
+}
+
+/* MULTIPLE CARD BRANCH LINES */
+
+.sk-col.multi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% / var(--count));
+  right: calc(50% / var(--count));
+  height: 2px;
+  background: var(--line);
+}
+
+/* .sk-col.multi::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 16px;
+  width: 2px;
+  background: var(--line);
+} */
+
+.sk-col.multi .sk-card::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  height: 16px;
+  width: 2px;
+  background: var(--line);
+}
+
+/* SINGLE CARD LINE */
+
+.sk-col.single::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 16px;
+  width: 2px;
+  background: var(--line);
+}
+
+.sk-col.empty::before,
+.sk-col.empty::after {
+  display: none;
+}
+
+/* CARDS */
+
+.sk-card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 82px;
+  background: var(--card);
+  color: #151712;
+  border-radius: 11px;
+  padding: 10px 7px;
+  text-align: center;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  transition: transform 0.3s ease;
+}
+
+.sk-card:hover {
+  transform: translateY(-2px);
+}
+
+.sk-card-icon {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 2px;
+  color: #25251e;
+}
+
+.sk-card-row {
+  flex-direction: row;
+  gap: 12px;
+  text-align: left;
+  min-height: 80px;
+  justify-content: center;
+}
+
+.sk-card-row .sk-card-icon {
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+/* DIFFERENT BAND HEIGHTS */
+
+.sk-band-companies {
+  min-height: 105px;
+}
+
+.sk-band-plants {
+  min-height: 153px;
+}
+
+.sk-band-lines {
+  min-height: 118px;
+}
+
+.sk-band-sensors {
+  min-height: 115px;
+}
+
+/* FOOTER */
+
+.sk-foot {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.sk-foot div {
+  background: #f5f0e6;
+  color: #171713;
+  border-radius: 10px;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 18px;
+  min-height: 67px;
+  display: grid;
+  place-items: center;
+}
+.sk-sensor-left .sk-card {
+  min-height: 100px;
+  padding: 15px;
+  font-size: 19px;
+}
+
+.sk-sensor-left .sk-card-icon {
+  font-size: 32px;
+}
+@media (max-width: 900px) {
+  .sk-root {
+    width: 100%;
+    zoom: 0.5;
+    transform-origin: top left;
+  }
+}
+
+@media (max-width: 600px) {
+  .sk-root {
+    zoom: 0.38;
+  }
+}
+
+@media (max-width: 500px) {
+  .sk-root {
+    zoom: 0.31;
+  }
+}
+
+@media (max-width: 450px) {
+  .sk-root {
+    zoom: 0.28;
+  }
+}
+
+@media (max-width: 400px) {
+  .sk-root {
+    zoom: 0.24;
+  }
+}
+
+.line1 {
+    height: 1.5px;
+    width: 665px;
+    background-color: white;
+    position: absolute;
+    top: 11px;
+    left: 490px;
+}
+.line2{
+    height: 37px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -24px;
+    left: 850px;
+}
+.line3{
+    height: 52px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -24px;
+    left: 490px;
+}
+.line4{
+    height: 52px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -24px;
+    left: 711px;
+}
+.line5{
+    height: 62px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -24px;
+    left: 1157px;
+}
+.line6{
+    height: 60px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -41px;
+    left: 488px;
+}
+.line7{
+    height: 56px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -39px;
+    left: 981px;
+}
+.line8{
+    height: 46px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -24px;
+    left: 433px;
+}
+.line9{
+    height: 41px;
+    width: 1.5px;
+    background-color: white;
+    position: absolute;
+    top: -26px;
+    left: 919px;
+}
